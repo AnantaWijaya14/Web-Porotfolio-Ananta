@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" style="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        try {
+            try {
+                tailwind.config = {
+                    darkMode: "class",
+                    theme: {
+                        extend: {
+                            "colors": {
+                                "surface-dim": "#dcd9d9",
+                                "on-secondary-fixed-variant": "#004e5b",
+                                "surface-container-high": "#eae7e7",
+                                "surface-variant": "#e5e2e1",
+                                "tertiary-fixed-dim": "#aed36c",
+                                "secondary": "#006878",
+                                "surface": "#fcf9f8",
+                                "on-surface": "#1c1b1b",
+                                "surface-container-highest": "#e5e2e1",
+                                "inverse-on-surface": "#f3f0ef",
+                                "surface-container-lowest": "#ffffff",
+                                "secondary-fixed": "#a7eeff",
+                                "inverse-surface": "#313030",
+                                "surface-container": "#f0eded",
+                                "electric-teal": "#0BB1CB",
+                                "secondary-fixed-dim": "#52d7f2",
+                                "on-tertiary-fixed-variant": "#354e00",
+                                "surface-gray": "#F4F7F7",
+                                "error": "#ba1a1a",
+                                "on-primary-fixed-variant": "#1a4d57",
+                                "on-secondary": "#ffffff",
+                                "on-error-container": "#93000a",
+                                "on-primary-fixed": "#001f25",
+                                "primary-fixed-dim": "#9eceda",
+                                "tertiary-fixed": "#c9f085",
+                                "background": "#fcf9f8",
+                                "outline": "#70787b",
+                                "deep-slate": "#043F49",
+                                "on-primary": "#ffffff",
+                                "surface-container-low": "#f6f3f2",
+                                "on-tertiary-fixed": "#131f00",
+                                "inverse-primary": "#9eceda",
+                                "on-error": "#ffffff",
+                                "error-container": "#ffdad6",
+                                "on-background": "#1c1b1b",
+                                "tertiary": "#192800",
+                                "on-secondary-fixed": "#001f25",
+                                "surface-tint": "#356570",
+                                "on-surface-variant": "#40484a",
+                                "surface-bright": "#fcf9f8",
+                                "primary-container": "#043f49",
+                                "primary": "#00282f",
+                                "on-tertiary-container": "#8bae4c",
+                                "secondary-container": "#60e2fd",
+                                "on-primary-container": "#7aaab6",
+                                "outline-variant": "#c0c8ca",
+                                "on-secondary-container": "#006372",
+                                "primary-fixed": "#baebf7",
+                                "on-tertiary": "#ffffff",
+                                "lime-accent": "#D6FD91",
+                                "tertiary-container": "#2a3f00"
+                            },
+                            "borderRadius": {
+                                "DEFAULT": "0.25rem",
+                                "lg": "0.5rem",
+                                "xl": "0.75rem",
+                                "full": "9999px"
+                            },
+                            "spacing": {
+                                "stack-sm": "8px",
+                                "margin-mobile": "16px",
+                                "container-max": "1200px",
+                                "stack-md": "16px",
+                                "section-gap": "80px",
+                                "stack-lg": "32px",
+                                "gutter": "24px"
+                            },
+                            "fontFamily": {
+                                "body-lg": ["Inter"],
+                                "headline-md": ["Plus Jakarta Sans"],
+                                "body-md": ["Inter"],
+                                "display-lg": ["Plus Jakarta Sans"],
+                                "label-sm": ["JetBrains Mono"]
+                            },
+                            "fontSize": {
+                                "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                                "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                                "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                                "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                                "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                                "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }]
+                            }
+                        }
+                    }
+                }
+            } catch (_e) {}
+        } catch (_e) {}
+    </script>
+    <meta charset="utf-8">
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-electric-teal selection:text-white">
+    <!-- Navbar -->
+    <header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30">
+        <nav class="max-w-container-max mx-auto flex justify-between items-center px-margin-mobile md:px-8 h-20">
+            <a href="#" class="text-headline-md font-headline-md font-extrabold text-deep-slate">Ananta</a>
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#about" class="font-label-sm text-label-sm text-on-surface-variant hover:text-electric-teal transition-colors duration-200">About</a>
+                <a href="#education" class="font-label-sm text-label-sm text-on-surface-variant hover:text-electric-teal transition-colors duration-200">Education</a>
+                <a href="#project" class="font-label-sm text-label-sm text-on-surface-variant hover:text-electric-teal transition-colors duration-200">Project</a>
+                <a href="#skills" class="font-label-sm text-label-sm text-on-surface-variant hover:text-electric-teal transition-colors duration-200">Skills</a>
+                <a href="#experience" class="font-label-sm text-label-sm text-on-surface-variant hover:text-electric-teal transition-colors duration-200">Experience</a>
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-electric-teal transition-colors duration-200" href="#contact">Contact</a>
+                <a href="./asset/docs/ATS_CV_IMadeAnantaWijaya.docx.pdf" target="_blank" rel="noopener noreferrer" class="bg-deep-slate text-on-primary px-6 py-2.5 rounded-lg font-label-sm text-label-sm hover:bg-electric-teal transition-all active:scale-95 inline-block">Download CV</a>
+            </div>
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden text-deep-slate">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="min-h-[80vh] flex flex-col justify-center items-center text-center px-margin-mobile md:px-8 py-stack-lg relative overflow-hidden" id="about">
+            <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-gutter items-center text-left opacity-100 translate-y-0">
+                <div class="order-2 md:order-1">
+                    <span class="font-label-sm text-label-sm text-electric-teal tracking-[0.2em] uppercase mb-4 block">Available for Opportunities</span>
+                    <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-deep-slate mb-6">
+                        AI &amp; Data <span class="text-electric-teal">Enthusiast</span>
+                    </h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-10 leading-relaxed">
+                        Fresh graduate Informatics student passionate about building intelligent systems and data-driven solutions. Specializing in bridging the gap between raw data and actionable intelligence.
+                    </p>
+                    <div class="flex flex-wrap gap-4 items-center">
+                        <a href="./asset/docs/ATS_CV_IMadeAnantaWijaya.docx.pdf" target="_blank" rel="noopener noreferrer" class="bg-deep-slate text-on-primary px-8 py-4 rounded-lg font-label-sm text-label-sm hover:shadow-xl hover:shadow-deep-slate/20 transition-all flex items-center gap-2 w-fit">
+                        Download CV <span class="material-symbols-outlined">download</span></a>
+                        <div class="flex gap-4 ml-2">
+                            <a class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container text-deep-slate hover:bg-electric-teal hover:text-white transition-all" href="https://drive.google.com/drive/folders/1y85BTNzJ2yXcSO1e7cXUC4m8891C6MJF?usp=drive_link">
+                                <span class="material-symbols-outlined" data-icon="link">link</span>
+                            </a>
+                            <a class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container text-deep-slate hover:bg-electric-teal hover:text-white transition-all" href="https://github.com/AnantaWijaya14">
+                                <span class="material-symbols-outlined" data-icon="code">code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2 flex justify-center md:justify-end">
+                    <div class="relative w-64 h-64 md:w-[400px] md:h-[400px]">
+                        <div class="absolute inset-0 bg-lime-accent rounded-2xl rotate-6 -z-10"></div>
+                        <div class="absolute inset-0 bg-deep-slate rounded-2xl -rotate-3 -z-10 opacity-20"></div>
+                        <div class="w-full h-full rounded-2xl overflow-hidden border border-outline-variant bg-surface-container shadow-2xl">
+                            <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A professional headshot of a young male Informatics graduate with a friendly and intelligent expression, set against a minimalist architectural background with soft daylight. The image should feature high-end corporate photography style with shallow depth of field, highlighting the expert yet approachable brand persona of Ananta. The lighting is bright and airy, consistent with a modern light-mode portfolio theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGlIcYG1pYalgamiiA-WWEzYebuloz-ZwGFezFI-gR4YLm3a0X5N85C7y4U72EMUjfcz4ZMRSmoGw9mhskFqgj-I6t0srX7muFi6ct8hdsm1vOIkJpqIuXBX9Dye8lbUJNsiTaBnICHMDJEklIvZ928-o_FGhyTFwIUXmj9lZWLwIzQZfOhfgb6Msn8iLuuCOsN9WKgINH5Jnw6IhaGD2dMmf-CRTpHwnNtj7_jpFUA5Hr51Ai8BWxyaI8i5fC9rhx0BoSCDozstUA1As" style="transform: scaleX(-1);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+<section class="bg-surface-gray py-section-gap px-margin-mobile md:px-8" id="project">
+    <div class="max-w-container-max mx-auto opacity-100 translate-y-0">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-stack-lg gap-4">
+            <div>
+                <h2 class="font-headline-md text-headline-md text-deep-slate mb-2">Projects</h2>
+                <p class="font-body-md text-body-md text-on-surface-variant max-w-lg">A selection of my technical implementations across data science and web development.</p>
+            </div>
+            <a class="text-electric-teal font-label-sm text-label-sm flex items-center gap-1 hover:underline" href="#">
+                View All Repository <span class="material-symbols-outlined">arrow_outward</span>
+            </a>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+            
+            <!-- Project Card 1: Statues Object Detection -->
+            <div class="group bg-surface rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-xl transition-all duration-300">
+                <div class="h-48 overflow-hidden relative">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYoq4mgMwQxKAExUfSuABp_mfY0BQQBAd1hWUEjZNFeAe4frODShPNSCGm6uNMA-XIAAyX8bAQzxRR2QMHxYh7cHON6hOP_8KTWKoAatBR8o8VWZcfmxFAywYJDWeWP8UTC8rVqRIF1SeTpDprUmpTVi7gvTYBntruHrTPiUe9kbBOmhE1Tkecx9tClH1vLgMwbBbGUELCahlhPcWb-by2LujB42BecVs6oBHE9C2fiErcKfN3MCs1QA" alt="Statues Object Detection">
+                    <div class="absolute top-4 left-4">
+                        <span class="text-[10px] font-label-sm px-3 py-1 rounded-full backdrop-blur-md border border-electric-teal/20 bg-electric-teal text-white font-bold opacity-100">Thesis</span>
+                    </div>
+                </div>
+                <div class="p-stack-md flex flex-col h-[calc(100%-12rem)]">
+                    <h3 class="font-headline-md text-headline-md text-deep-slate mb-2">Statues Object Detection</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">Developed a YOLO-based object detection model to identify eight categories of Balinese statues from images and videos, including dataset preparation, annotation, augmentation, model training, and performance evaluation.</p>
+                    
+                    <!-- Card Footer -->
+                    <div class="flex items-center justify-between mt-auto pt-4 border-t border-outline-variant/10">
+                        <!-- Kiri: View Detail -->
+                        <a href="#" class="font-label-sm text-label-sm font-bold flex items-center gap-1 hover:text-electric-teal transition-colors text-deep-slate">
+                            View Detail <span class="material-symbols-outlined text-[18px]">visibility</span>
+                        </a>
+                        
+                        <!-- Kanan: View Demo & View Github -->
+                        <div class="flex items-center gap-4">
+                            <a href="Maaf_masih_dalam_tahap_pengembangan" target="_blank" rel="noopener noreferrer" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors">
+                                View Demo <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+                            </a>
+                            <a href="https://github.com/AnantaWijaya14/Deteksi_Jenis_Patung_Bali_Menggunakan_Metode_YOLO" title="Source Code" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors">
+                                View Github <span class="material-symbols-outlined text-[18px]" data-icon="terminal">terminal</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 2: Diabetes Prediction -->
+<div class="group bg-surface rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-xl transition-all duration-300">
+    <div class="h-48 overflow-hidden relative">
+        <!-- Kode gambar di bawah ini sudah diperbarui -->
+        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoMIzTsMQzqTR26xnssmbAQrtEJ2Yw_bXcXaaQmxQDDQQWNMqWF2Iw59ws6XW_RWvIzeS7MMkIJMwSGNs49gl0M3MBpoPiG3hzuZ6BUN6Bqi8w0Wfyx4gH0FL_n4pJtg_zQkAwmgjIkNsg_YymJCFl8YIgV5mb7I_js60h0WXERnhx6u-l2H843KH-19Hnq-RDkzoJC1bL4pForZ4JAjYahb7MUJdU05L_oFM5rewiuwr6TBxLyYXVFQ" alt="Diabetes Prediction Dashboard">
+        <div class="absolute top-4 left-4">
+            <span class="text-[10px] font-label-sm px-3 py-1 rounded-full backdrop-blur-md border border-electric-teal/20 bg-electric-teal text-white font-bold opacity-100">Data Science</span>
+        </div>
+    </div>
+    <div class="p-stack-md flex flex-col h-[calc(100%-12rem)]">
+        <h3 class="font-headline-md text-headline-md text-deep-slate mb-2">Diabetes Prediction</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">Developed and deployed a machine learning application using Streamlit to predict diabetes risk based on user health data.</p>
+        
+        <!-- Card Footer -->
+        <div class="flex items-center justify-between mt-auto pt-4 border-t border-outline-variant/10">
+            <!-- Kiri: View Detail -->
+            <a href="#" class="font-label-sm text-label-sm font-bold flex items-center gap-1 hover:text-electric-teal transition-colors text-deep-slate">
+                View Detail <span class="material-symbols-outlined text-[18px]">visibility</span>
+            </a>
+            
+            <!-- Kanan: View Demo & View Github -->
+            <div class="flex items-center gap-4">
+                <a href="https://app-diabetes-app-ananta.streamlit.app/" target="_blank" rel="noopener noreferrer" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors">
+                    View Demo <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+                </a>
+                <a href="https://github.com/AnantaWijaya14/streamlit-diabetes-app" title="Source Code" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors">
+                    View Github <span class="material-symbols-outlined text-[18px]" data-icon="terminal">terminal</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- Project Card 3: Chatbot Bali Destination -->
+            <div class="group bg-surface rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-xl transition-all duration-300">
+                <div class="h-48 overflow-hidden relative">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQnVkFJXJWBCLICb7zUPs1sy7pSDvbnvtY1ItWziOIeyoUml2bRTPRIAnJES8gcBXFoCriih3cgEugosgGL4ZcYGSJEfgDIcvjKyCJ71ozaXiKTB9HPwY_FZ6oNgT6oJSh20r55OJWrhbXOHM4jRFcxGrU3KDtivj3OLnOvfRqrpD6Zec2n6oWtrjdDz_hGguy7Dh7lvowC7c5BQlWZpMcDgis8QOftImzMTk5CH8mdflak06dhzoFgw" alt="Chatbot Bali Destination">
+                    <div class="absolute top-4 left-4">
+                        <span class="text-[10px] font-label-sm px-3 py-1 rounded-full backdrop-blur-md border border-electric-teal/20 bg-electric-teal text-white font-bold opacity-100">Data Science</span>
+                    </div>
+                </div>
+                <div class="p-stack-md flex flex-col h-[calc(100%-12rem)]">
+                    <h3 class="font-headline-md text-headline-md text-deep-slate mb-2">Chatbot Bali Destination</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">Developed an AI-powered chatbot that processes user queries and provides information and recommendations about Bali destinations, hotels, restaurants, cultural events, and transportation.</p>
+                    
+                    <!-- Card Footer -->
+                    <div class="flex items-center justify-between mt-auto pt-4 border-t border-outline-variant/10">
+                        <!-- Kiri: View Detail -->
+                        <a href="#" class="font-label-sm text-label-sm font-bold flex items-center gap-1 hover:text-electric-teal transition-colors text-deep-slate">
+                            View Detail <span class="material-symbols-outlined text-[18px]">visibility</span>
+                        </a>
+                        
+                        <!-- Kanan: View Demo & View Github -->
+                        <div class="flex items-center gap-4">
+                            <a href="https://chatbot-ananta-hacktiv8-finalproject.streamlit.app/" target="_blank" rel="noopener noreferrer" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors">
+                                View Demo <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+                            </a>
+                            <a href="https://github.com/AnantaWijaya14/chatbot-ananta-BaliTourismAIGuide" target="_blank" rel="noopener noreferrer" title="Source Code" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors">
+                                View Github <span class="material-symbols-outlined text-[18px]" data-icon="terminal">terminal</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+        <!-- Education Section -->
+        <section class="py-section-gap px-margin-mobile md:px-8" id="education">
+            <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-stack-lg items-start opacity-100 translate-y-0">
+                <div>
+                    <h2 class="font-headline-md text-headline-md text-deep-slate mb-8">Education Formal</h2>
+                    <div class="relative pl-8 border-l-2 border-outline-variant/30 flex flex-col gap-10">
+                        <!-- Formal S1 -->
+                        <div class="relative">
+                            <div class="absolute -left-[37px] top-1.5 w-3.5 h-3.5 rounded-full bg-electric-teal border-2 border-surface"></div>
+                            <span class="font-label-sm text-label-sm text-electric-teal mb-1 block">2022 — 2026</span>
+                            <h4 class="font-headline-md text-[18px] text-deep-slate mb-1">Bachelor of Informatics</h4>
+                            <p class="font-body-md text-on-surface-variant">Institut Bisnis dan Teknologi Indonesia (INSTIKI)</p>
+                            <p class="font-label-sm text-[11px] text-on-surface-variant/70 mt-2">GPA: 3.91/4.0</p>
+                        </div>
+                        <!-- SMA -->
+                        <div class="relative">
+                            <div class="absolute -left-[37px] top-1.5 w-3.5 h-3.5 rounded-full bg-outline-variant border-2 border-surface"></div>
+                            <span class="font-label-sm text-label-sm text-on-surface-variant mb-1 block">2019 — 2022</span>
+                            <h4 class="font-headline-md text-[18px] text-deep-slate mb-1">Senior High School</h4>
+                            <p class="font-body-md text-on-surface-variant">SMAN 1 Kuta</p>
+                        </div>
+                        <!-- SMP -->
+                        <div class="relative">
+                            <div class="absolute -left-[37px] top-1.5 w-3.5 h-3.5 rounded-full bg-outline-variant border-2 border-surface"></div>
+                            <span class="font-label-sm text-label-sm text-on-surface-variant mb-1 block">2016 — 2019</span>
+                            <h4 class="font-headline-md text-[18px] text-deep-slate mb-1">Junior High School</h4>
+                            <p class="font-body-md text-on-surface-variant">SMPN 1 Kuta Utara</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="font-headline-md text-headline-md text-deep-slate mb-8">Education Informal</h2>
+                    <div class="bg-deep-slate p-8 rounded-2xl text-on-primary shadow-xl">
+                        <div class="flex items-start gap-4 mb-6">
+                            <div class="bg-lime-accent text-deep-slate p-3 rounded-lg flex-shrink-0">
+                                <span class="material-symbols-outlined">psychology</span>
+                            </div>
+                            <div>
+                                <h3 class="font-headline-md text-headline-md leading-tight mb-2">Data Science &amp; ML Bootcamp</h3>
+                                <p class="font-body-md text-on-primary-container">dibimbing.id • Professional Certification</p>
+                            </div>
+                        </div>
+                        <p class="font-body-md mb-6 text-on-primary/80">Intensive 6-month hands-on program focusing on statistical modeling, machine learning deployment, and data storytelling.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-3 font-label-sm text-label-sm">
+                                <span class="material-symbols-outlined text-electric-teal text-[20px]">check_circle</span>
+                                Predictive Analytics &amp; Regression
+                            </li>
+                            <li class="flex items-center gap-3 font-label-sm text-label-sm">
+                                <span class="material-symbols-outlined text-electric-teal text-[20px]">check_circle</span>
+                                Deep Learning with Keras &amp; TensorFlow
+                            </li>
+                            <li class="flex items-center gap-3 font-label-sm text-label-sm">
+                                <span class="material-symbols-outlined text-electric-teal text-[20px]">check_circle</span>
+                                Advanced Data Visualization
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section (Bento Layout) -->
+        <section class="bg-surface-container-low py-section-gap px-margin-mobile md:px-8" id="skills">
+            <div class="max-w-container-max mx-auto opacity-100 translate-y-0">
+                <div class="text-center mb-16">
+                    <h2 class="font-headline-md text-headline-md text-deep-slate mb-2">Technical Proficiency</h2>
+                    <p class="font-body-md text-on-surface-variant">My toolkit is divided by domains to ensure the right tool for every challenge.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+                    <!-- Web Dev Role -->
+                    <div class="bg-surface p-8 rounded-2xl border border-outline-variant/30 flex flex-col gap-8">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-electric-teal">web</span>
+                            <h3 class="font-headline-md text-headline-md text-deep-slate">Web Development</h3>
+                        </div>
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-3">Languages</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-surface-gray border border-outline-variant/20 px-3 py-1.5 rounded-md font-label-sm text-label-sm text-deep-slate">Javascript</span>
+                                    <span class="bg-surface-gray border border-outline-variant/20 px-3 py-1.5 rounded-md font-label-sm text-label-sm text-deep-slate">PHP</span>
+                                    <span class="bg-surface-gray border border-outline-variant/20 px-3 py-1.5 rounded-md font-label-sm text-label-sm text-deep-slate">HTML/CSS</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-3">Frameworks</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-surface-gray border border-outline-variant/20 px-3 py-1.5 rounded-md font-label-sm text-label-sm text-deep-slate">Laravel</span>
+                                    <span class="bg-surface-gray border border-outline-variant/20 px-3 py-1.5 rounded-md font-label-sm text-label-sm text-deep-slate">React.js</span>
+                                    <span class="bg-surface-gray border border-outline-variant/20 px-3 py-1.5 rounded-md font-label-sm text-label-sm text-deep-slate">Bootstrap</span>
+                                    <span class="bg-surface-gray border border-outline-variant/20 px-3 py-1.5 rounded-md font-label-sm text-label-sm text-deep-slate">Tailwind CSS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- AI/Data Role -->
+                    <div class="bg-surface p-8 rounded-2xl border border-outline-variant/30 flex flex-col gap-8">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-electric-teal">database</span>
+                            <h3 class="font-headline-md text-headline-md text-deep-slate">Data Science &amp; AI</h3>
+                        </div>
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-3">Languages</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-surface-gray border border-outline-variant/20 px-3 py-1.5 rounded-md font-label-sm text-label-sm text-deep-slate">Python</span>
+                                    <span class="bg-surface-gray border border-outline-variant/20 px-3 py-1.5 rounded-md font-label-sm text-label-sm text-deep-slate">SQL</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-3">Core Libraries</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-surface-gray border border-outline-variant/20 px-3 py-1.5 rounded-md font-label-sm text-label-sm text-deep-slate">Pandas</span>
+                                    <span class="bg-surface-gray border border-outline-variant/20 px-3 py-1.5 rounded-md font-label-sm text-label-sm text-deep-slate">Numpy</span>
+                                    <span class="bg-surface-gray border border-outline-variant/20 px-3 py-1.5 rounded-md font-label-sm text-label-sm text-deep-slate">Scikit-learn</span>
+                                    <span class="bg-surface-gray border border-outline-variant/20 px-3 py-1.5 rounded-md font-label-sm text-label-sm text-deep-slate">Tensorflow</span>
+                                    <span class="bg-surface-gray border border-outline-variant/20 px-3 py-1.5 rounded-md font-label-sm text-label-sm text-deep-slate">Seaborn</span>
+                                    <span class="bg-surface-gray border border-outline-variant/20 px-3 py-1.5 rounded-md font-label-sm text-label-sm text-deep-slate">Matplotlib</span>
+                                    <span class="bg-surface-gray border border-outline-variant/20 px-3 py-1.5 rounded-md font-label-sm text-label-sm text-deep-slate">LangChain</span>
+                                    <span class="bg-surface-gray border border-outline-variant/20 px-3 py-1.5 rounded-md font-label-sm text-label-sm text-deep-slate">LangGraph</span>
+                                    <span class="bg-surface-gray border border-outline-variant/20 px-3 py-1.5 rounded-md font-label-sm text-label-sm text-deep-slate">Streamlit</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Shared Tools (Span full width) -->
+                    <div class="md:col-span-2 bg-deep-slate p-8 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-8 text-on-primary">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-lime-accent">construction</span>
+                            <h3 class="font-headline-md text-headline-md">Developer Ecosystem</h3>
+                        </div>
+                        <div class="flex flex-wrap justify-center gap-3">
+                            <span class="bg-on-primary-fixed-variant px-4 py-2 rounded-lg font-label-sm text-label-sm">VSCode</span>
+                            <span class="bg-on-primary-fixed-variant px-4 py-2 rounded-lg font-label-sm text-label-sm">Anaconda</span>
+                            <span class="bg-on-primary-fixed-variant px-4 py-2 rounded-lg font-label-sm text-label-sm">Google Colab</span>
+                            <span class="bg-on-primary-fixed-variant px-4 py-2 rounded-lg font-label-sm text-label-sm">Tableau</span>
+                            <span class="bg-on-primary-fixed-variant px-4 py-2 rounded-lg font-label-sm text-label-sm">GitHub</span>
+                            <span class="bg-on-primary-fixed-variant px-4 py-2 rounded-lg font-label-sm text-label-sm">Kaggle</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Journey (Experience & Organization) -->
+        <section class="py-section-gap px-margin-mobile md:px-8" id="experience">
+            <div class="max-w-container-max mx-auto opacity-100 translate-y-0">
+                <h2 class="font-headline-md text-headline-md text-deep-slate mb-12 text-center">Working Experience</h2>
+                <div class="space-y-8">
+                    <!-- Exp Item 1 -->
+                    <div class="group grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8 p-8 rounded-2xl border border-outline-variant/20 hover:border-electric-teal/50 hover:bg-surface-container-low transition-all">
+                        <div class="flex flex-col">
+                            <span class="font-label-sm text-label-sm text-on-surface-variant mb-2">June 2023 — Present</span>
+                            <h3 class="font-headline-md text-[20px] text-deep-slate">Data Entry</h3>
+                            <p class="font-body-md text-on-surface-variant mb-4">Ovilla's Seminyak</p>
+                            <span class="w-fit px-3 py-1 rounded bg-surface-dim text-on-surface-variant font-label-sm text-[10px] uppercase">Freelance</span>
+                        </div>
+                        <div class="font-body-md text-on-surface-variant leading-relaxed">
+                            <p class="">
+                                <p class="">Prepared and verified monthly supplier invoice reports for a villa’s accounting department by recording transaction dates, invoice numbers, item descriptions, and prices, as well as calculating total invoice amounts to ensure accurate reporting before submission.</p>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Org Item 1 -->
+                    <div class="group grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8 p-8 rounded-2xl border border-outline-variant/20 hover:border-electric-teal/50 hover:bg-surface-container-low transition-all">
+                        <div class="flex flex-col">
+                            <span class="font-label-sm text-label-sm text-on-surface-variant mb-2">Feb 2026 — April 2026</span>
+                            <h3 class="font-headline-md text-[20px] text-deep-slate">Digital Asset Processing</h3>
+                            <p class="font-body-md text-on-surface-variant mb-4">Nusaheritage.id</p>
+                            <span class="w-fit px-3 py-1 rounded font-label-sm text-[10px] uppercase bg-surface-dim text-on-surface-variant">Freelance</span>
+                        </div>
+                        <div class="font-body-md text-on-surface-variant leading-relaxed">
+                            <p class="">
+                                <p class="">Planned the project workflow using mind maps, created and cleaned 3D models of Balinese statues with Polycam, refined the models and added display bases using Blender, compiled structured metadata containing statue photographs, names, descriptions, and categories, prepared data processing reports, generated automated image descriptions using BLIP from Hugging Face and Gemini, and designed a visual catalog in Canva based on the collected images and metadata.</p>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Exp Item 2 -->
+                    <div class="group grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-8 p-8 rounded-2xl border border-outline-variant/20 hover:border-electric-teal/50 hover:bg-surface-container-low transition-all">
+                        <div class="flex flex-col">
+                            <span class="font-label-sm text-label-sm text-on-surface-variant mb-2">July 2024 — September 2024</span>
+                            <h3 class="font-headline-md text-[20px] text-deep-slate">Web Developer</h3>
+                            <p class="font-body-md text-on-surface-variant mb-4">Kayana Creative</p>
+                            <span class="w-fit px-3 py-1 rounded bg-electric-teal/10 text-electric-teal font-label-sm text-[10px] uppercase">Internship</span>
+                        </div>
+                        <div class="font-body-md text-on-surface-variant leading-relaxed">
+                            <p class="">
+                                <p class="">Designed responsive UI/UX layouts and developed a full-stack e-commerce website using Laravel, including product pages, user interface components, product catalog management, content organization, and core website features, resulting in a functional prototype that could support further system development.</p>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-section-gap px-margin-mobile md:px-8 bg-surface-container-low" id="organization">
+            <div class="max-w-container-max mx-auto opacity-100 translate-y-0">
+                <h2 class="font-headline-md text-headline-md text-deep-slate mb-12 text-center">Organization Experience</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Org Item 1 -->
+                    <div class="bg-surface p-6 rounded-xl border border-outline-variant/20 hover:border-electric-teal/30 transition-all">
+                        <div class="flex flex-col mb-4">
+                            <span class="font-label-sm text-label-sm text-electric-teal mb-1">October 2024 – October 2026</span>
+                            <h3 class="font-headline-md text-[18px] text-deep-slate">Public Relation Coordinator</h3>
+                            <p class="font-body-md text-on-surface-variant">Sekha Truna Dharma Kerthi</p>
+                        </div>
+                        <ul class="space-y-2 font-body-md text-on-surface-variant text-[14px] leading-relaxed">
+                            <li class="flex gap-2"><span class="text-electric-teal">•</span> Recorded and updated data of new youth members</li>
+                            <li class="flex gap-2"><span class="text-electric-teal">•</span> Contributed to the distribution of Ogoh-Ogoh event uniforms</li>
+                            <li class="flex gap-2"><span class="text-electric-teal">•</span> Distributed official community notices</li>
+                        </ul>
+                    </div>
+                    <!-- Org Item 2 -->
+                    <div class="bg-surface p-6 rounded-xl border border-outline-variant/20 hover:border-electric-teal/30 transition-all">
+                        <div class="flex flex-col mb-4">
+                            <span class="font-label-sm text-label-sm text-electric-teal mb-1">February 2024</span>
+                            <h3 class="font-headline-md text-[18px] text-deep-slate">Public Relations Division Member</h3>
+                            <p class="font-body-md text-on-surface-variant">Artspirasi 9 INSTIKI</p>
+                        </div>
+                        <ul class="space-y-2 font-body-md text-on-surface-variant text-[14px] leading-relaxed">
+                            <li class="flex gap-2"><span class="text-electric-teal">•</span> Searched for and contacted media partners</li>
+                            <li class="flex gap-2"><span class="text-electric-teal">•</span> Distributed partnership letters and invitations</li>
+                        </ul>
+                    </div>
+                    <!-- Org Item 3 -->
+                    <div class="bg-surface p-6 rounded-xl border border-outline-variant/20 hover:border-electric-teal/30 transition-all">
+                        <div class="flex flex-col mb-4">
+                            <span class="font-label-sm text-label-sm text-electric-teal mb-1">October 2023</span>
+                            <h3 class="font-headline-md text-[18px] text-deep-slate">Vice Head of Equipment Division</h3>
+                            <p class="font-body-md text-on-surface-variant">Road to DEVFEST, IDC x GDSC INSTIKI</p>
+                        </div>
+                        <ul class="space-y-2 font-body-md text-on-surface-variant text-[14px] leading-relaxed">
+                            <li class="flex gap-2"><span class="text-electric-teal">•</span> Coordinated event logistics and equipment preparation</li>
+                            <li class="flex gap-2"><span class="text-electric-teal">•</span> Assisted backstage technical and operational needs</li>
+                        </ul>
+                    </div>
+                    <!-- Org Item 4 -->
+                    <div class="bg-surface p-6 rounded-xl border border-outline-variant/20 hover:border-electric-teal/30 transition-all">
+                        <div class="flex flex-col mb-4">
+                            <span class="font-label-sm text-label-sm text-electric-teal mb-1">June 2020 – June 2021</span>
+                            <h3 class="font-headline-md text-[18px] text-deep-slate">Head of Inventory and Field Coordinator</h3>
+                            <p class="font-body-md text-on-surface-variant">Teater TERAS</p>
+                        </div>
+                        <ul class="space-y-2 font-body-md text-on-surface-variant text-[14px] leading-relaxed">
+                            <li class="flex gap-2"><span class="text-electric-teal">•</span> Coordinated equipment needs for activities</li>
+                            <li class="flex gap-2"><span class="text-electric-teal">•</span> Managed theater inventory and equipment</li>
+                            <li class="flex gap-2"><span class="text-electric-teal">•</span> Supported technical and logistical preparation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="py-section-gap px-margin-mobile md:px-8 bg-surface-gray" id="contact">
+            <div class="max-w-container-max mx-auto text-center opacity-100 translate-y-0">
+                <h2 class="font-headline-md text-display-lg-mobile md:text-headline-md text-deep-slate mb-4">Let's Connect</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">Open to collaborations, full-time opportunities, or just a technical chat about the future of AI.</p>
+                <div class="flex flex-wrap justify-center gap-gutter">
+                    <a class="glass-card p-8 rounded-2xl flex flex-col items-center gap-4 w-64 hover:border-electric-teal transition-all group" href="mailto:ananjack35.com">
+                        <span class="material-symbols-outlined text-4xl text-electric-teal group-hover:scale-110 transition-transform">mail</span>
+                        <span class="font-headline-md text-[18px] text-deep-slate">Email Me</span>
+                        <span class="font-label-sm text-label-sm text-on-surface-variant">ananjack35@gmail.com</span>
+                    </a>
+                    <a class="glass-card p-8 rounded-2xl flex flex-col items-center gap-4 w-64 hover:border-electric-teal transition-all group" href="wa.me/6287816992590">
+                        <span class="material-symbols-outlined text-4xl text-electric-teal group-hover:scale-110 transition-transform" style="font-variation-settings: &quot;FILL&quot; 1;">chat</span>
+                        <span class="font-headline-md text-[18px] text-deep-slate">WhatsApp</span>
+                        <span class="font-label-sm text-label-sm text-on-surface-variant">+62 878-1699-2590</span>
+                    </a>
+                    <a class="glass-card p-8 rounded-2xl flex flex-col items-center gap-4 w-64 hover:border-electric-teal transition-all group" href="https://www.linkedin.com/in/i-made-ananta-wijaya-8b19b2281/">
+                        <span class="material-symbols-outlined text-4xl text-electric-teal group-hover:scale-110 transition-transform">person</span>
+                        <span class="font-headline-md text-[18px] text-deep-slate">LinkedIn</span>
+                        <span class="font-label-sm text-label-sm text-on-surface-variant">IMadeAnantaWijaya</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest border-t border-outline-variant/20">
+        <div class="max-w-container-max mx-auto py-stack-lg px-margin-mobile md:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <span class="text-body-lg font-headline-md font-bold text-deep-slate">Ananta</span>
+            </div>
+            <p class="font-body-md text-label-sm text-on-surface-variant order-3 md:order-2">
+                © 2026 Ananta. All rights reserved.
+            </p>
+            <div class="flex gap-6 order-2 md:order-3 mb-4 md:mb-0">
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-electric-teal transition-colors" href="#">LinkedIn</a>
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-electric-teal transition-colors" href="#">Instagram</a>
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-electric-teal transition-colors" href="#">GitHub</a>
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-electric-teal transition-colors" href="#">Medium</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+
+        // Highlight active nav dot logic
+        window.addEventListener('scroll', () => {
+            const sections = ['about', 'education', 'project', 'skills', 'experience', 'contact'];
+            let current = 'about';
+            
+            sections.forEach(section => {
+                const element = document.getElementById(section);
+                if (element && window.pageYOffset >= element.offsetTop - 100) {
+                    current = section;
+                }
+            });
+
+            document.querySelectorAll('nav a').forEach(a => {
+                a.classList.remove('text-electric-teal', 'font-bold', 'relative', 'after:content-[\'\']', 'after:absolute', 'after:-bottom-1', 'after:left-1/2', 'after:-translate-x-1/2', 'after:w-1', 'after:h-1', 'after:bg-electric-teal', 'after:rounded-full');
+                if (a.getAttribute('href') === `#${current}`) {
+                    a.classList.add('text-electric-teal', 'font-bold', 'relative', 'after:content-[\'\']', 'after:absolute', 'after:-bottom-1', 'after:left-1/2', 'after:-translate-x-1/2', 'after:w-1',
+    </script>
+</body>
+</html>
