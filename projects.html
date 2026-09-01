@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semua Project - Ananta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        try {
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            "surface-dim": "#dcd9d9",
+                            "on-secondary-fixed-variant": "#004e5b",
+                            "surface-container-high": "#eae7e7",
+                            "surface-variant": "#e5e2e1",
+                            "secondary": "#006878",
+                            "surface": "#fcf9f8",
+                            "on-surface": "#1c1b1b",
+                            "electric-teal": "#0BB1CB",
+                            "surface-gray": "#F4F7F7",
+                            "error": "#ba1a1a",
+                            "outline": "#70787b",
+                            "deep-slate": "#043F49",
+                            "on-primary": "#ffffff",
+                            "surface-container-low": "#f6f3f2",
+                            "surface-container-lowest": "#ffffff"
+                        },
+                        spacing: {
+                            "margin-mobile": "16px",
+                            "container-max": "1200px",
+                            "stack-md": "16px",
+                            "section-gap": "80px",
+                            "stack-lg": "32px",
+                            "gutter": "24px"
+                        },
+                        fontFamily: {
+                            "body-lg": ["Inter"],
+                            "headline-md": ["Plus Jakarta Sans"],
+                            "body-md": ["Inter"],
+                            "display-lg": ["Plus Jakarta Sans"],
+                            "label-sm": ["JetBrains Mono"]
+                        },
+                        fontSize: {
+                            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                            "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }]
+                        }
+                    }
+                }
+            }
+        } catch (_e) {}
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-electric-teal selection:text-white">
+    
+    <!-- Navbar (Link diarahkan kembali ke index.html) -->
+    <header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30">
+        <nav class="max-w-container-max mx-auto flex justify-between items-center px-margin-mobile md:px-8 h-20">
+            <a href="index.html" class="text-headline-md font-headline-md font-extrabold text-deep-slate">Ananta</a>
+            
+            <div class="hidden md:flex items-center gap-8">
+                <a href="index.html#about" class="font-label-sm text-label-sm text-on-surface-variant hover:text-electric-teal transition-colors">About</a>
+                <a href="index.html#project" class="font-label-sm text-label-sm text-electric-teal font-bold transition-colors">Project</a>
+                <a href="index.html#education" class="font-label-sm text-label-sm text-on-surface-variant hover:text-electric-teal transition-colors">Education</a>
+                <a href="index.html#skills" class="font-label-sm text-label-sm text-on-surface-variant hover:text-electric-teal transition-colors">Skills</a>
+                <a href="index.html#experience" class="font-label-sm text-label-sm text-on-surface-variant hover:text-electric-teal transition-colors">Experience</a>
+                <a href="index.html#contact" class="font-label-sm text-label-sm text-on-surface-variant hover:text-electric-teal transition-colors">Contact</a>
+                <a href="./asset/docs/ATS_CV_IMadeAnantaWijaya.docx.pdf" target="_blank" rel="noopener noreferrer" class="bg-deep-slate text-on-primary px-6 py-2.5 rounded-lg font-label-sm text-label-sm hover:bg-electric-teal transition-all active:scale-95 inline-block">Download CV</a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-deep-slate focus:outline-none">
+                <span id="menu-icon" class="material-symbols-outlined">menu</span>
+            </button>
+        </nav>
+
+        <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-surface border-b border-outline-variant/30 shadow-lg flex-col px-margin-mobile py-4 gap-4">
+            <a href="index.html#about" class="mobile-link font-label-sm text-label-sm text-on-surface-variant py-2">About</a>
+            <a href="index.html#project" class="mobile-link font-label-sm text-label-sm text-electric-teal font-bold py-2">Project</a>
+            <a href="index.html#education" class="mobile-link font-label-sm text-label-sm text-on-surface-variant py-2">Education</a>
+            <a href="index.html#skills" class="mobile-link font-label-sm text-label-sm text-on-surface-variant py-2">Skills</a>
+            <a href="index.html#experience" class="mobile-link font-label-sm text-label-sm text-on-surface-variant py-2">Experience</a>
+            <a href="index.html#contact" class="mobile-link font-label-sm text-label-sm text-on-surface-variant py-2">Contact</a>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-section-gap px-margin-mobile md:px-8 bg-surface-gray min-h-screen">
+        <div class="max-w-container-max mx-auto opacity-100 translate-y-0 fade-in-section">
+            <div class="flex items-center gap-4 mb-stack-lg border-b border-outline/20 pb-4">
+                <a href="index.html#project" class="text-deep-slate hover:text-electric-teal transition-colors flex items-center justify-center w-10 h-10 rounded-full bg-surface">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                </a>
+                <div>
+                    <h1 class="font-headline-md text-[32px] text-deep-slate">All Projects Repository</h1>
+                    <p class="font-body-md text-on-surface-variant">A complete collection of my technical implementations.</p>
+                </div>
+            </div>
+            
+            <!-- Grid untuk 9 Project -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                
+                <!-- Project Card 1: Statues Object Detection -->
+                <div class="group bg-surface rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="h-48 overflow-hidden relative">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYoq4mgMwQxKAExUfSuABp_mfY0BQQBAd1hWUEjZNFeAe4frODShPNSCGm6uNMA-XIAAyX8bAQzxRR2QMHxYh7cHON6hOP_8KTWKoAatBR8o8VWZcfmxFAywYJDWeWP8UTC8rVqRIF1SeTpDprUmpTVi7gvTYBntruHrTPiUe9kbBOmhE1Tkecx9tClH1vLgMwbBbGUELCahlhPcWb-by2LujB42BecVs6oBHE9C2fiErcKfN3MCs1QA" alt="Statues Object Detection">
+                        <div class="absolute top-4 left-4">
+                            <span class="text-[10px] font-label-sm px-3 py-1 rounded-full backdrop-blur-md border border-electric-teal/20 bg-electric-teal text-white font-bold opacity-100">Thesis</span>
+                        </div>
+                    </div>
+                    <div class="p-stack-md flex flex-col h-[calc(100%-12rem)]">
+                        <h3 class="font-headline-md text-headline-md text-deep-slate mb-2">Statues Object Detection</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">Developed a YOLO-based object detection model to identify eight categories of Balinese statues from images and videos, including dataset preparation, annotation, augmentation, model training, and performance evaluation.</p>
+                        
+                        <!-- Card Footer -->
+                        <div class="flex items-center justify-between mt-auto pt-4 border-t border-outline-variant/10">
+                            <!-- <a href="#" class="font-label-sm text-label-sm font-bold flex items-center gap-1 hover:text-electric-teal transition-colors text-deep-slate">
+                                View Detail <span class="material-symbols-outlined text-[18px]">visibility</span> -->
+                            </a>
+                            <div class="flex items-center gap-4">
+                                <button id="btn-view-demo-1" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors focus:outline-none">
+                                    View Demo <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+                                </button>
+                                <a href="https://github.com/AnantaWijaya14/Deteksi_Jenis_Patung_Bali_Menggunakan_Metode_YOLO" title="Source Code" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors">
+                                    View Github <span class="material-symbols-outlined text-[18px]" data-icon="terminal">terminal</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2: Diabetes Prediction -->
+                <div class="group bg-surface rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="h-48 overflow-hidden relative">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoMIzTsMQzqTR26xnssmbAQrtEJ2Yw_bXcXaaQmxQDDQQWNMqWF2Iw59ws6XW_RWvIzeS7MMkIJMwSGNs49gl0M3MBpoPiG3hzuZ6BUN6Bqi8w0Wfyx4gH0FL_n4pJtg_zQkAwmgjIkNsg_YymJCFl8YIgV5mb7I_js60h0WXERnhx6u-l2H843KH-19Hnq-RDkzoJC1bL4pForZ4JAjYahb7MUJdU05L_oFM5rewiuwr6TBxLyYXVFQ" alt="Diabetes Prediction Dashboard">
+                        <div class="absolute top-4 left-4">
+                            <span class="text-[10px] font-label-sm px-3 py-1 rounded-full backdrop-blur-md border border-electric-teal/20 bg-electric-teal text-white font-bold opacity-100">Data Science</span>
+                        </div>
+                    </div>
+                    <div class="p-stack-md flex flex-col h-[calc(100%-12rem)]">
+                        <h3 class="font-headline-md text-headline-md text-deep-slate mb-2">Diabetes Prediction</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">Developed and deployed a machine learning application using Streamlit to predict diabetes risk based on user health data.</p>
+                        
+                        <div class="flex items-center justify-between mt-auto pt-4 border-t border-outline-variant/10">
+                            <!-- <a href="#" class="font-label-sm text-label-sm font-bold flex items-center gap-1 hover:text-electric-teal transition-colors text-deep-slate">
+                                View Detail <span class="material-symbols-outlined text-[18px]">visibility</span> -->
+                            </a>
+                            <div class="flex items-center gap-4">
+                                <a href="https://app-diabetes-app-ananta.streamlit.app/" target="_blank" rel="noopener noreferrer" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors">
+                                    View Demo <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+                                </a>
+                                <a href="https://github.com/AnantaWijaya14/streamlit-diabetes-app" title="Source Code" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors">
+                                    View Github <span class="material-symbols-outlined text-[18px]" data-icon="terminal">terminal</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3: Chatbot Bali Destination -->
+                <div class="group bg-surface rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="h-48 overflow-hidden relative">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQnVkFJXJWBCLICb7zUPs1sy7pSDvbnvtY1ItWziOIeyoUml2bRTPRIAnJES8gcBXFoCriih3cgEugosgGL4ZcYGSJEfgDIcvjKyCJ71ozaXiKTB9HPwY_FZ6oNgT6oJSh20r55OJWrhbXOHM4jRFcxGrU3KDtivj3OLnOvfRqrpD6Zec2n6oWtrjdDz_hGguy7Dh7lvowC7c5BQlWZpMcDgis8QOftImzMTk5CH8mdflak06dhzoFgw" alt="Chatbot Bali Destination">
+                        <div class="absolute top-4 left-4">
+                            <span class="text-[10px] font-label-sm px-3 py-1 rounded-full backdrop-blur-md border border-electric-teal/20 bg-electric-teal text-white font-bold opacity-100">Data Science</span>
+                        </div>
+                    </div>
+                    <div class="p-stack-md flex flex-col h-[calc(100%-12rem)]">
+                        <h3 class="font-headline-md text-headline-md text-deep-slate mb-2">Chatbot Bali Destination</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">Developed an AI-powered chatbot that processes user queries and provides information and recommendations about Bali destinations, hotels, restaurants, cultural events, and transportation.</p>
+                        
+                        <div class="flex items-center justify-between mt-auto pt-4 border-t border-outline-variant/10">
+                            <!-- <a href="#" class="font-label-sm text-label-sm font-bold flex items-center gap-1 hover:text-electric-teal transition-colors text-deep-slate">
+                                View Detail <span class="material-symbols-outlined text-[18px]">visibility</span> -->
+                            </a>
+                            <div class="flex items-center gap-4">
+                                <a href="https://chatbot-ananta-hacktiv8-finalproject.streamlit.app/" target="_blank" rel="noopener noreferrer" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors">
+                                    View Demo <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+                                </a>
+                                <a href="https://github.com/AnantaWijaya14/chatbot-ananta-BaliTourismAIGuide" target="_blank" rel="noopener noreferrer" title="Source Code" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors">
+                                    View Github <span class="material-symbols-outlined text-[18px]" data-icon="terminal">terminal</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 4: Dummy -->
+                <div class="group bg-surface rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="h-48 overflow-hidden relative">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://placehold.co/600x400/eae7e7/1c1b1b?text=Project+4" alt="Dummy Project 4">
+                        <div class="absolute top-4 left-4">
+                            <span class="text-[10px] font-label-sm px-3 py-1 rounded-full backdrop-blur-md border border-electric-teal/20 bg-electric-teal text-white font-bold opacity-100">Web Dev</span>
+                        </div>
+                    </div>
+                    <div class="p-stack-md flex flex-col h-[calc(100%-12rem)]">
+                        <h3 class="font-headline-md text-headline-md text-deep-slate mb-2">Project 4</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">This is a placeholder description for Project 4. Replace this text with the actual details of your project when ready.</p>
+                        
+                        <div class="flex items-center justify-between mt-auto pt-4 border-t border-outline-variant/10">
+                            <!-- <a href="#" class="font-label-sm text-label-sm font-bold flex items-center gap-1 hover:text-electric-teal transition-colors text-deep-slate">
+                                View Detail <span class="material-symbols-outlined text-[18px]">visibility</span> -->
+                            </a>
+                            <div class="flex items-center gap-4">
+                                <a href="#" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors">
+                                    View Demo <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+                                </a>
+                                <a href="#" title="Source Code" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors">
+                                    View Github <span class="material-symbols-outlined text-[18px]" data-icon="terminal">terminal</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 5: Klasifikasi Penyakit Dauh Jagung -->
+                <div class="group bg-surface rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="h-48 overflow-hidden relative">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="./asset/images/project5/project5.png" alt="Dummy Project 6">
+                        <div class="absolute top-4 left-4">
+                            <span class="text-[10px] font-label-sm px-3 py-1 rounded-full backdrop-blur-md border border-electric-teal/20 bg-electric-teal text-white font-bold opacity-100">Deep Learning</span>
+                        </div>
+                    </div>
+                    <div class="p-stack-md flex flex-col h-[calc(100%-12rem)]">
+                        <h3 class="font-headline-md text-headline-md text-deep-slate mb-2">Corn Leaf Disease Classification</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">This is a placeholder description for Project 5. Replace this text with the actual details of your project when ready.</p>
+                        
+                        <div class="flex items-center justify-between mt-auto pt-4 border-t border-outline-variant/10">
+                            <!-- <a href="#" class="font-label-sm text-label-sm font-bold flex items-center gap-1 hover:text-electric-teal transition-colors text-deep-slate">
+                                View Detail <span class="material-symbols-outlined text-[18px]">visibility</span> -->
+                            </a>
+                            <div class="flex items-center gap-4">
+                                <a href="https://deeplearning-deeplearning-corn-leaf-disease.streamlit.app/" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors">
+                                    View Demo <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+                                </a>
+                                <a href="https://github.com/AnantaWijaya14/DeepLearning-DeepLearning-Corn-Leaf-Disease" title="Source Code" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors">
+                                    View Github <span class="material-symbols-outlined text-[18px]" data-icon="terminal">terminal</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 6: Dashboard Super Store -->
+                <div class="group bg-surface rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="h-48 overflow-hidden relative">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="./asset/images/project6/linechart.png" alt="Dummy Project 6">
+                        <div class="absolute top-4 left-4">
+                            <span class="text-[10px] font-label-sm px-3 py-1 rounded-full backdrop-blur-md border border-electric-teal/20 bg-electric-teal text-white font-bold opacity-100">Visualization</span>
+                        </div>
+                    </div>
+                    <div class="p-stack-md flex flex-col h-[calc(100%-12rem)]">
+                        <h3 class="font-headline-md text-headline-md text-deep-slate mb-2">Dashboard Data Superstore</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">This is a placeholder description for Project 6. Replace this text with the actual details of your project when ready.</p>
+                        
+                        <div class="flex items-center justify-between mt-auto pt-4 border-t border-outline-variant/10">
+                            <!-- <a href="#" class="font-label-sm text-label-sm font-bold flex items-center gap-1 hover:text-electric-teal transition-colors text-deep-slate">
+                                View Detail <span class="material-symbols-outlined text-[18px]">visibility</span>
+                            </a> -->
+                            <div class="flex items-center gap-4">
+                                <a href="#" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors">
+                                    View Demo <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+                                </a>
+                                <a href="https://github.com/AnantaWijaya14/Task2_Dashboard_streamlit" title="Source Code" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors">
+                                    View Github <span class="material-symbols-outlined text-[18px]" data-icon="terminal">terminal</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 7: Dummy
+                <div class="group bg-surface rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="h-48 overflow-hidden relative">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://placehold.co/600x400/eae7e7/1c1b1b?text=Project+7" alt="Dummy Project 7">
+                        <div class="absolute top-4 left-4">
+                            <span class="text-[10px] font-label-sm px-3 py-1 rounded-full backdrop-blur-md border border-electric-teal/20 bg-electric-teal text-white font-bold opacity-100">Thesis</span>
+                        </div>
+                    </div>
+                    <div class="p-stack-md flex flex-col h-[calc(100%-12rem)]">
+                        <h3 class="font-headline-md text-headline-md text-deep-slate mb-2">Project 7</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">This is a placeholder description for Project 7. Replace this text with the actual details of your project when ready.</p>
+                        
+                        <div class="flex items-center justify-between mt-auto pt-4 border-t border-outline-variant/10">
+                            <a href="#" class="font-label-sm text-label-sm font-bold flex items-center gap-1 hover:text-electric-teal transition-colors text-deep-slate">
+                                View Detail <span class="material-symbols-outlined text-[18px]">visibility</span>
+                            </a>
+                            <div class="flex items-center gap-4">
+                                <a href="#" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors">
+                                    View Demo <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+                                </a>
+                                <a href="#" title="Source Code" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors">
+                                    View Github <span class="material-symbols-outlined text-[18px]" data-icon="terminal">terminal</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 8: Dummy -->
+                <!-- <div class="group bg-surface rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="h-48 overflow-hidden relative">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://placehold.co/600x400/eae7e7/1c1b1b?text=Project+8" alt="Dummy Project 8">
+                        <div class="absolute top-4 left-4">
+                            <span class="text-[10px] font-label-sm px-3 py-1 rounded-full backdrop-blur-md border border-electric-teal/20 bg-electric-teal text-white font-bold opacity-100">Web Dev</span>
+                        </div>
+                    </div>
+                    <div class="p-stack-md flex flex-col h-[calc(100%-12rem)]">
+                        <h3 class="font-headline-md text-headline-md text-deep-slate mb-2">Project 8</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">This is a placeholder description for Project 8. Replace this text with the actual details of your project when ready.</p>
+                        
+                        <div class="flex items-center justify-between mt-auto pt-4 border-t border-outline-variant/10">
+                            <a href="#" class="font-label-sm text-label-sm font-bold flex items-center gap-1 hover:text-electric-teal transition-colors text-deep-slate">
+                                View Detail <span class="material-symbols-outlined text-[18px]">visibility</span>
+                            </a>
+                            <div class="flex items-center gap-4">
+                                <a href="#" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors">
+                                    View Demo <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+                                </a>
+                                <a href="#" title="Source Code" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors">
+                                    View Github <span class="material-symbols-outlined text-[18px]" data-icon="terminal">terminal</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>  -->
+
+                <!-- Project Card 9: Dummy -->
+                <!-- <div class="group bg-surface rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-xl transition-all duration-300">
+                    <div class="h-48 overflow-hidden relative">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://placehold.co/600x400/eae7e7/1c1b1b?text=Project+9" alt="Dummy Project 9">
+                        <div class="absolute top-4 left-4">
+                            <span class="text-[10px] font-label-sm px-3 py-1 rounded-full backdrop-blur-md border border-electric-teal/20 bg-electric-teal text-white font-bold opacity-100">Data Science</span>
+                        </div>
+                    </div>
+                    <div class="p-stack-md flex flex-col h-[calc(100%-12rem)]">
+                        <h3 class="font-headline-md text-headline-md text-deep-slate mb-2">Project 9</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">This is a placeholder description for Project 9. Replace this text with the actual details of your project when ready.</p>
+                        
+                        <div class="flex items-center justify-between mt-auto pt-4 border-t border-outline-variant/10">
+                            <a href="#" class="font-label-sm text-label-sm font-bold flex items-center gap-1 hover:text-electric-teal transition-colors text-deep-slate">
+                                View Detail <span class="material-symbols-outlined text-[18px]">visibility</span>
+                            </a>
+                            <div class="flex items-center gap-4">
+                                <a href="#" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors">
+                                    View Demo <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+                                </a>
+                                <a href="#" title="Source Code" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors">
+                                    View Github <span class="material-symbols-outlined text-[18px]" data-icon="terminal">terminal</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+    </main>
+
+     <!-- Footer -->
+     <footer class="bg-surface-container-lowest border-t border-outline-variant/20">
+        <div class="max-w-container-max mx-auto py-stack-lg px-margin-mobile md:px-8 flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0">
+            
+            <div class="mb-2 md:mb-0 order-1">
+                <span class="text-body-lg font-headline-md font-bold text-deep-slate">Ananta</span>
+            </div>
+            
+            <p class="font-body-md text-label-sm text-on-surface-variant order-3 md:order-2">
+                © 2026 Ananta. All rights reserved.
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-6 order-2 md:order-3">
+                
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/i-made-ananta-wijaya-8b19b2281/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant hover:text-electric-teal transition-colors group">
+                    <svg class="w-5 h-5 fill-current group-hover:-translate-y-1 transition-transform duration-200" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                    LinkedIn
+                </a>
+                
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/anantawijaya.portofolio" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant hover:text-electric-teal transition-colors group">
+                    <svg class="w-5 h-5 fill-current group-hover:-translate-y-1 transition-transform duration-200" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.98-10.181a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/>
+                    </svg>
+                    Instagram
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/AnantaWijaya14" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant hover:text-electric-teal transition-colors group">
+                    <svg class="w-5 h-5 fill-current group-hover:-translate-y-1 transition-transform duration-200" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                    </svg>
+                    GitHub
+                </a>
+
+                <!-- Medium -->
+                <a href="#" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant hover:text-electric-teal transition-colors group">
+                    <svg class="w-5 h-5 fill-current group-hover:-translate-y-1 transition-transform duration-200" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.793 4.108a6.37 6.37 0 100 12.74 6.37 6.37 0 000-12.74zM16.632 4.417c-1.848 0-3.346 2.709-3.346 6.05 0 3.344 1.498 6.052 3.346 6.052s3.348-2.708 3.348-6.051c0-3.342-1.5-6.051-3.348-6.051zm5.556.326c-.886 0-1.605 2.564-1.605 5.726s.719 5.726 1.605 5.726 1.608-2.564 1.608-5.726-.722-5.726-1.608-5.726z"/>
+                    </svg>
+                    Medium
+                </a>
+
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Logika sederhana untuk animasi masuk halaman dan hamburger menu
+        document.querySelector('.fade-in-section').classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+        setTimeout(() => {
+            document.querySelector('.fade-in-section').classList.remove('opacity-0', 'translate-y-10');
+        }, 100);
+
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = document.getElementById('menu-icon');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            menu.classList.toggle('flex');
+            icon.textContent = menu.classList.contains('hidden') ? 'menu' : 'close';
+        });
+    </script>
+</body>
+</html>

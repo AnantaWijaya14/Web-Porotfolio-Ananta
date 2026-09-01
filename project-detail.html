@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statues Object Detection - Ananta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        try {
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            "surface-dim": "#dcd9d9",
+                            "on-secondary-fixed-variant": "#004e5b",
+                            "surface-container-high": "#eae7e7",
+                            "surface-variant": "#e5e2e1",
+                            "secondary": "#006878",
+                            "surface": "#fcf9f8",
+                            "on-surface": "#1c1b1b",
+                            "electric-teal": "#0BB1CB",
+                            "surface-gray": "#F4F7F7",
+                            "error": "#ba1a1a",
+                            "outline": "#70787b",
+                            "deep-slate": "#043F49",
+                            "on-primary": "#ffffff",
+                            "surface-container-low": "#f6f3f2",
+                            "surface-container-lowest": "#ffffff"
+                        },
+                        spacing: {
+                            "margin-mobile": "16px",
+                            "container-max": "1200px",
+                            "stack-md": "16px",
+                            "section-gap": "80px",
+                            "stack-lg": "32px",
+                            "gutter": "24px"
+                        },
+                        fontFamily: {
+                            "body-lg": ["Inter"],
+                            "headline-md": ["Plus Jakarta Sans"],
+                            "body-md": ["Inter"],
+                            "display-lg": ["Plus Jakarta Sans"],
+                            "label-sm": ["JetBrains Mono"]
+                        }
+                    }
+                }
+            }
+        } catch (_e) {}
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-electric-teal selection:text-white">
+    
+    <!-- Navbar -->
+    <header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30">
+        <nav class="max-w-container-max mx-auto flex justify-between items-center px-margin-mobile md:px-8 h-20">
+            <a href="index.html" class="text-headline-md font-headline-md font-extrabold text-deep-slate">Ananta</a>
+            
+            <div class="hidden md:flex items-center gap-8">
+                <a href="index.html#about" class="font-label-sm text-label-sm text-on-surface-variant hover:text-electric-teal transition-colors">About</a>
+                <a href="index.html#project" class="font-label-sm text-label-sm text-electric-teal font-bold transition-colors">Project</a>
+                <a href="index.html#contact" class="font-label-sm text-label-sm text-on-surface-variant hover:text-electric-teal transition-colors">Contact</a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-deep-slate focus:outline-none">
+                <span id="menu-icon" class="material-symbols-outlined">menu</span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="pt-32 pb-section-gap">
+        <!-- Hero Project Section -->
+        <section class="px-margin-mobile md:px-8 mb-16">
+            <div class="max-w-container-max mx-auto">
+                <a href="index.html#project" class="inline-flex items-center gap-2 text-on-surface-variant hover:text-electric-teal transition-colors mb-8 font-label-sm text-label-sm uppercase tracking-wider">
+                    <span class="material-symbols-outlined text-[18px]">arrow_back</span> Back to Projects
+                </a>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                    <div>
+                        <div class="flex gap-2 mb-4">
+                            <span class="px-3 py-1 rounded-full bg-electric-teal/10 text-electric-teal font-label-sm text-[10px] uppercase font-bold">Thesis</span>
+                            <span class="px-3 py-1 rounded-full bg-surface-dim text-deep-slate font-label-sm text-[10px] uppercase font-bold">Computer Vision</span>
+                        </div>
+                        <h1 class="font-display-lg text-[32px] md:text-[48px] text-deep-slate leading-tight mb-6">Balinese Statues Object Detection</h1>
+                        <p class="font-body-lg text-on-surface-variant leading-relaxed mb-8">
+                            A deep learning initiative to preserve cultural heritage by automatically detecting and classifying eight categories of Balinese statues using YOLO architecture.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-4">
+                            <a href="https://github.com/AnantaWijaya14/Deteksi_Jenis_Patung_Bali_Menggunakan_Metode_YOLO" target="_blank" class="bg-deep-slate text-white px-6 py-3 rounded-lg font-label-sm text-label-sm flex items-center gap-2 hover:bg-electric-teal transition-colors">
+                                View Source Code <span class="material-symbols-outlined text-[18px]">terminal</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Facts Card -->
+                    <div class="bg-surface-gray p-8 rounded-2xl border border-outline-variant/30">
+                        <h3 class="font-headline-md text-headline-md text-deep-slate mb-6 border-b border-outline-variant/20 pb-4">Project Details</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <span class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-1">Role & Team</span>
+                                <span class="font-body-md text-deep-slate font-medium">AI Engineer / Data Annotation</span>
+                                <p class="text-sm text-on-surface-variant mt-1">Collaborated with Wulan, Faridha, and Fanchy.</p>
+                            </div>
+                            <div>
+                                <span class="block font-label-sm text-label-sm text-on-surface-variant uppercase mb-1">Tech Stack</span>
+                                <div class="flex flex-wrap gap-2 mt-2">
+                                    <span class="px-3 py-1 bg-surface border border-outline-variant/20 rounded font-label-sm text-[11px]">Python</span>
+                                    <span class="px-3 py-1 bg-surface border border-outline-variant/20 rounded font-label-sm text-[11px]">YOLOv12n</span>
+                                    <span class="px-3 py-1 bg-surface border border-outline-variant/20 rounded font-label-sm text-[11px]">Roboflow</span>
+                                    <span class="px-3 py-1 bg-surface border border-outline-variant/20 rounded font-label-sm text-[11px]">Polycam</span>
+                                    <span class="px-3 py-1 bg-surface border border-outline-variant/20 rounded font-label-sm text-[11px]">Google Colab</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Image Banner -->
+        <section class="px-margin-mobile md:px-8 mb-16">
+            <div class="max-w-container-max mx-auto h-[400px] rounded-2xl overflow-hidden border border-outline-variant/30 shadow-lg">
+                <!-- Ganti dengan gambar arsitektur atau visualisasimu -->
+                <img src="https://placehold.co/1200x400/eae7e7/1c1b1b?text=Object+Detection+Bounding+Box+Visual" alt="Model Result" class="w-full h-full object-cover">
+            </div>
+        </section>
+
+        <!-- Content Body -->
+        <section class="px-margin-mobile md:px-8">
+            <div class="max-w-3xl mx-auto space-y-12">
+                
+                <div>
+                    <h2 class="font-headline-md text-[28px] text-deep-slate mb-4">Overview & Problem Statement</h2>
+                    <p class="font-body-md text-on-surface-variant leading-relaxed mb-4">
+                        Balinese statues possess rich cultural and mythological significance, categorized into distinct classes such as Dewa, Dewi, Mitologi, and Raksasa. However, manual identification requires domain expertise. This project aims to bridge that gap by developing a reliable computer vision model capable of identifying eight specific categories of these statues in real-time.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="font-headline-md text-[28px] text-deep-slate mb-4">Innovative Methodology & Data Pipeline</h2>
+                    <p class="font-body-md text-on-surface-variant leading-relaxed mb-6">
+                        One of the major bottlenecks in training robust object detection models is acquiring enough varied angle data. To solve this, we implemented a 3D-to-2D dataset construction pipeline.
+                    </p>
+                    <ul class="space-y-4 font-body-md text-on-surface-variant">
+                        <li class="flex gap-3">
+                            <span class="material-symbols-outlined text-electric-teal">3d_rotation</span>
+                            <span><strong>3D Scanning:</strong> Utilized Polycam to create accurate 3D models of 240 physical statues, refining them and adding display bases using Blender.</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="material-symbols-outlined text-electric-teal">auto_awesome_motion</span>
+                            <span><strong>Data Expansion:</strong> Extracted multi-angle images from the 3D reconstructions, generating a massive dataset of approximately 14,280 unique 2D images.</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="material-symbols-outlined text-electric-teal">rule</span>
+                            <span><strong>Strict Annotation:</strong> Distributed labeling tasks among four team members using Roboflow. We implemented strict data range boundaries to ensure no class overlap during the manual annotation process.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="font-headline-md text-[28px] text-deep-slate mb-4">Model Architecture & Results</h2>
+                    <p class="font-body-md text-on-surface-variant leading-relaxed mb-6">
+                        We experimented with advanced object detection architectures, focusing primarily on YOLOv11 and YOLOv12 due to their balance of speed and accuracy. The models were trained and evaluated using Google Colab.
+                    </p>
+                    <!-- Highlight Box -->
+                    <div class="bg-surface-container-low border-l-4 border-electric-teal p-6 rounded-r-xl mb-6">
+                        <h4 class="font-headline-md text-[18px] text-deep-slate mb-2">Training Performance (YOLOv12n)</h4>
+                        <div class="grid grid-cols-2 gap-4 mt-4">
+                            <div>
+                                <span class="block text-2xl font-bold text-electric-teal">0.965</span>
+                                <span class="font-label-sm text-on-surface-variant uppercase">mAP50</span>
+                            </div>
+                            <div>
+                                <span class="block text-2xl font-bold text-electric-teal">0.928</span>
+                                <span class="font-label-sm text-on-surface-variant uppercase">Precision</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="font-headline-md text-[28px] text-deep-slate mb-4">Challenges & Key Takeaways</h2>
+                    <p class="font-body-md text-on-surface-variant leading-relaxed">
+                        Managing a multi-stage data pipeline required strict coordination. Setting up local CUDA environments and tracking hyperparameters taught me the realities of deep learning engineering beyond writing code. Furthermore, refining the dataset iteratively proved that data quality often trumps model complexity when aiming for high precision.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest border-t border-outline-variant/20 mt-12">
+        <div class="max-w-container-max mx-auto py-stack-lg px-margin-mobile md:px-8 text-center">
+            <p class="font-body-md text-label-sm text-on-surface-variant">© 2026 Ananta. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
