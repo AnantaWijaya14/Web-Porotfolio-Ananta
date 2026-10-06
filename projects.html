@@ -105,95 +105,107 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
                 
                 <!-- Project Card 1: Statues Object Detection -->
-                <div class="group bg-surface rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-xl transition-all duration-300">
-                    <div class="h-48 overflow-hidden relative">
-                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYoq4mgMwQxKAExUfSuABp_mfY0BQQBAd1hWUEjZNFeAe4frODShPNSCGm6uNMA-XIAAyX8bAQzxRR2QMHxYh7cHON6hOP_8KTWKoAatBR8o8VWZcfmxFAywYJDWeWP8UTC8rVqRIF1SeTpDprUmpTVi7gvTYBntruHrTPiUe9kbBOmhE1Tkecx9tClH1vLgMwbBbGUELCahlhPcWb-by2LujB42BecVs6oBHE9C2fiErcKfN3MCs1QA" alt="Statues Object Detection">
-                        <div class="absolute top-4 left-4">
-                            <span class="text-[10px] font-label-sm px-3 py-1 rounded-full backdrop-blur-md border border-electric-teal/20 bg-electric-teal text-white font-bold opacity-100">Thesis</span>
-                        </div>
+            <div class="group bg-surface rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-xl transition-all duration-300">
+                <div class="h-48 overflow-hidden relative">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="./asset/images/project1/project1.png" alt="Statues Object Detection">
+                    <div class="absolute top-6 left-4">
+                        <span class="text-[10px] font-label-sm px-3 py-1 rounded-full backdrop-blur-md border border-electric-teal/20 bg-electric-teal text-white font-bold opacity-100">Thesis</span>
                     </div>
-                    <div class="p-stack-md flex flex-col h-[calc(100%-12rem)]">
-                        <h3 class="font-headline-md text-headline-md text-deep-slate mb-2">Statues Object Detection</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">Developed a YOLO-based object detection model to identify eight categories of Balinese statues from images and videos, including dataset preparation, annotation, augmentation, model training, and performance evaluation.</p>
+                </div>
+                <div class="p-stack-md flex flex-col h-[calc(100%-12rem)]">
+                    <h3 class="font-headline-md text-headline-md text-deep-slate mb-2">Statues Object Detection</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">Developed a YOLO-based object detection model to identify eight categories of Balinese statues from images and videos, including dataset preparation, annotation, augmentation, model training, and performance evaluation.</p>
+                    
+                    <!-- Card Footer -->
+                    <div class="flex items-center justify-between mt-auto pt-4 border-t border-outline-variant/10">
+                        <!-- Kiri: View Detail -->
+                        <!-- <a href="project-detail.html" class="font-label-sm text-label-sm font-bold flex items-center gap-1 hover:text-electric-teal transition-colors text-deep-slate">
+                            View Detail <span class="material-symbols-outlined text-[18px]">visibility</span>
+                        </a> -->
                         
-                        <!-- Card Footer -->
-                        <div class="flex items-center justify-between mt-auto pt-4 border-t border-outline-variant/10">
-                            <!-- <a href="#" class="font-label-sm text-label-sm font-bold flex items-center gap-1 hover:text-electric-teal transition-colors text-deep-slate">
-                                View Detail <span class="material-symbols-outlined text-[18px]">visibility</span> -->
+                        <!-- Kanan: View Demo & View Github -->
+                        <div class="flex items-center gap-4">
+                            <!-- View Demo (Diubah menjadi button pemanggil modal) -->
+                            <button id="btn-view-demo-1" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors focus:outline-none">
+                                View Demo <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+                            </button>
+                            <a href="https://github.com/AnantaWijaya14/Deteksi_Jenis_Patung_Bali_Menggunakan_Metode_YOLO" title="Source Code" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors">
+                                View Github <span class="material-symbols-outlined text-[18px]" data-icon="terminal">terminal</span>
                             </a>
-                            <div class="flex items-center gap-4">
-                                <button id="btn-view-demo-1" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors focus:outline-none">
-                                    View Demo <span class="material-symbols-outlined text-[18px]">open_in_new</span>
-                                </button>
-                                <a href="https://github.com/AnantaWijaya14/Deteksi_Jenis_Patung_Bali_Menggunakan_Metode_YOLO" title="Source Code" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors">
-                                    View Github <span class="material-symbols-outlined text-[18px]" data-icon="terminal">terminal</span>
-                                </a>
-                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Project Card 2: Diabetes Prediction -->
-                <div class="group bg-surface rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-xl transition-all duration-300">
-                    <div class="h-48 overflow-hidden relative">
-                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoMIzTsMQzqTR26xnssmbAQrtEJ2Yw_bXcXaaQmxQDDQQWNMqWF2Iw59ws6XW_RWvIzeS7MMkIJMwSGNs49gl0M3MBpoPiG3hzuZ6BUN6Bqi8w0Wfyx4gH0FL_n4pJtg_zQkAwmgjIkNsg_YymJCFl8YIgV5mb7I_js60h0WXERnhx6u-l2H843KH-19Hnq-RDkzoJC1bL4pForZ4JAjYahb7MUJdU05L_oFM5rewiuwr6TBxLyYXVFQ" alt="Diabetes Prediction Dashboard">
-                        <div class="absolute top-4 left-4">
-                            <span class="text-[10px] font-label-sm px-3 py-1 rounded-full backdrop-blur-md border border-electric-teal/20 bg-electric-teal text-white font-bold opacity-100">Data Science</span>
-                        </div>
+            <!-- Project Card 2: Telco Customer Churn -->
+<div class="group bg-surface rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-xl transition-all duration-300">
+    <div class="h-48 overflow-hidden relative">
+        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="./asset/images/project2/project2.png" alt="Telco Customer Churn Prediction">
+        <div class="absolute top-6 left-4">
+            <span class="text-[10px] font-label-sm px-3 py-1 rounded-full backdrop-blur-md border border-electric-teal/20 bg-electric-teal text-white font-bold opacity-100">Data Science</span>
+        </div>
+    </div>
+    <div class="p-stack-md flex flex-col h-[calc(100%-12rem)]">
+        <h3 class="font-headline-md text-headline-md text-deep-slate mb-2">Telco Customer Churn Prediction</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">Built a machine learning model to predict customer churn for a telecommunications company, improving retention strategies and reducing revenue loss.</p>
+        
+        <!-- Card Footer -->
+        <div class="flex items-center justify-between mt-auto pt-4 border-t border-outline-variant/10">
+            <!-- Kiri: View Detail -->
+            <!-- <a href="#" class="font-label-sm text-label-sm font-bold flex items-center gap-1 hover:text-electric-teal transition-colors text-deep-slate">
+                View Detail <span class="material-symbols-outlined text-[18px]">visibility</span>
+            </a> -->
+            
+            <!-- Kanan: View Demo & View Github -->
+            <div class="flex items-center gap-4">
+                <a href="https://app-diabetes-app-ananta.streamlit.app/" target="_blank" rel="noopener noreferrer" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors">
+                    View Demo <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+                </a>
+                <a href="https://github.com/AnantaWijaya14/streamlit-diabetes-app" title="Source Code" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors">
+                    View Github <span class="material-symbols-outlined text-[18px]" data-icon="terminal">terminal</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+            <!-- Project Card 3: Boston Husing Price Prediction -->
+            <div class="group bg-surface rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-xl transition-all duration-300">
+                <div class="h-48 overflow-hidden relative">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="./asset/images/project3/project3.png" alt="Boston Husing Price Prediction">
+                    <div class="absolute top-6 left-4">
+                        <span class="text-[10px] font-label-sm px-3 py-1 rounded-full backdrop-blur-md border border-electric-teal/20 bg-electric-teal text-white font-bold opacity-100">Data Science</span>
                     </div>
-                    <div class="p-stack-md flex flex-col h-[calc(100%-12rem)]">
-                        <h3 class="font-headline-md text-headline-md text-deep-slate mb-2">Diabetes Prediction</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">Developed and deployed a machine learning application using Streamlit to predict diabetes risk based on user health data.</p>
+                </div>
+                <div class="p-stack-md flex flex-col h-[calc(100%-12rem)]">
+                    <h3 class="font-headline-md text-headline-md text-deep-slate mb-2">Boston Husing Price Prediction</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">Built a machine learning model to predict housing prices in Boston based on various features.</p>
+                    
+                    <!-- Card Footer -->
+                    <div class="flex items-center justify-between mt-auto pt-4 border-t border-outline-variant/10">
+                        <!-- Kiri: View Detail -->
+                        <!-- <a href="#" class="font-label-sm text-label-sm font-bold flex items-center gap-1 hover:text-electric-teal transition-colors text-deep-slate">
+                            View Detail <span class="material-symbols-outlined text-[18px]">visibility</span>
+                        </a> -->
                         
-                        <div class="flex items-center justify-between mt-auto pt-4 border-t border-outline-variant/10">
-                            <!-- <a href="#" class="font-label-sm text-label-sm font-bold flex items-center gap-1 hover:text-electric-teal transition-colors text-deep-slate">
-                                View Detail <span class="material-symbols-outlined text-[18px]">visibility</span> -->
+                        <!-- Kanan: View Demo & View Github -->
+                        <div class="flex items-center gap-4">
+                            <a href="https://chatbot-ananta-hacktiv8-finalproject.streamlit.app/" target="_blank" rel="noopener noreferrer" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors">
+                                View Demo <span class="material-symbols-outlined text-[18px]">open_in_new</span>
                             </a>
-                            <div class="flex items-center gap-4">
-                                <a href="https://app-diabetes-app-ananta.streamlit.app/" target="_blank" rel="noopener noreferrer" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors">
-                                    View Demo <span class="material-symbols-outlined text-[18px]">open_in_new</span>
-                                </a>
-                                <a href="https://github.com/AnantaWijaya14/streamlit-diabetes-app" title="Source Code" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors">
-                                    View Github <span class="material-symbols-outlined text-[18px]" data-icon="terminal">terminal</span>
-                                </a>
-                            </div>
+                            <a href="https://github.com/AnantaWijaya14/chatbot-ananta-BaliTourismAIGuide" target="_blank" rel="noopener noreferrer" title="Source Code" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors">
+                                View Github <span class="material-symbols-outlined text-[18px]" data-icon="terminal">terminal</span>
+                            </a>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Project Card 3: Chatbot Bali Destination -->
+                <!-- Project Card 4: German Credit Risk Prediction -->
                 <div class="group bg-surface rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-xl transition-all duration-300">
                     <div class="h-48 overflow-hidden relative">
-                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQnVkFJXJWBCLICb7zUPs1sy7pSDvbnvtY1ItWziOIeyoUml2bRTPRIAnJES8gcBXFoCriih3cgEugosgGL4ZcYGSJEfgDIcvjKyCJ71ozaXiKTB9HPwY_FZ6oNgT6oJSh20r55OJWrhbXOHM4jRFcxGrU3KDtivj3OLnOvfRqrpD6Zec2n6oWtrjdDz_hGguy7Dh7lvowC7c5BQlWZpMcDgis8QOftImzMTk5CH8mdflak06dhzoFgw" alt="Chatbot Bali Destination">
-                        <div class="absolute top-4 left-4">
-                            <span class="text-[10px] font-label-sm px-3 py-1 rounded-full backdrop-blur-md border border-electric-teal/20 bg-electric-teal text-white font-bold opacity-100">Data Science</span>
-                        </div>
-                    </div>
-                    <div class="p-stack-md flex flex-col h-[calc(100%-12rem)]">
-                        <h3 class="font-headline-md text-headline-md text-deep-slate mb-2">Chatbot Bali Destination</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">Developed an AI-powered chatbot that processes user queries and provides information and recommendations about Bali destinations, hotels, restaurants, cultural events, and transportation.</p>
-                        
-                        <div class="flex items-center justify-between mt-auto pt-4 border-t border-outline-variant/10">
-                            <!-- <a href="#" class="font-label-sm text-label-sm font-bold flex items-center gap-1 hover:text-electric-teal transition-colors text-deep-slate">
-                                View Detail <span class="material-symbols-outlined text-[18px]">visibility</span> -->
-                            </a>
-                            <div class="flex items-center gap-4">
-                                <a href="https://chatbot-ananta-hacktiv8-finalproject.streamlit.app/" target="_blank" rel="noopener noreferrer" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors">
-                                    View Demo <span class="material-symbols-outlined text-[18px]">open_in_new</span>
-                                </a>
-                                <a href="https://github.com/AnantaWijaya14/chatbot-ananta-BaliTourismAIGuide" target="_blank" rel="noopener noreferrer" title="Source Code" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors">
-                                    View Github <span class="material-symbols-outlined text-[18px]" data-icon="terminal">terminal</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project Card 4: Dummy -->
-                <div class="group bg-surface rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-xl transition-all duration-300">
-                    <div class="h-48 overflow-hidden relative">
-                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="./asset/images/project4/german credit risk gambar.jpeg" alt="Dummy Project 4">
-                        <div class="absolute top-4 left-4">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="./asset/images/project4/project4.png" alt="German Credit Risk Prediction">
+                        <div class="absolute top-6 left-4">
                             <span class="text-[10px] font-label-sm px-3 py-1 rounded-full backdrop-blur-md border border-electric-teal/20 bg-electric-teal text-white font-bold opacity-100">Data Science</span>
                         </div>
                     </div>
@@ -220,8 +232,8 @@
                 <!-- Project Card 5: Klasifikasi Penyakit Dauh Jagung -->
                 <div class="group bg-surface rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-xl transition-all duration-300">
                     <div class="h-48 overflow-hidden relative">
-                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="./asset/images/project5/project5.png" alt="Dummy Project 6">
-                        <div class="absolute top-4 left-4">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="./asset/images/project5/project5.png" alt="Corn Leaf Disease Classification">
+                        <div class="absolute top-6 left-4">
                             <span class="text-[10px] font-label-sm px-3 py-1 rounded-full backdrop-blur-md border border-electric-teal/20 bg-electric-teal text-white font-bold opacity-100">Deep Learning</span>
                         </div>
                     </div>
@@ -248,8 +260,8 @@
                 <!-- Project Card 6: Dashboard Super Store -->
                 <div class="group bg-surface rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-xl transition-all duration-300">
                     <div class="h-48 overflow-hidden relative">
-                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="./asset/images/project6/linechart.png" alt="Dummy Project 6">
-                        <div class="absolute top-4 left-4">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="./asset/images/project6/project6.png" alt="Dashboard Data Superstore">
+                        <div class="absolute top-6 left-4">
                             <span class="text-[10px] font-label-sm px-3 py-1 rounded-full backdrop-blur-md border border-electric-teal/20 bg-electric-teal text-white font-bold opacity-100">Visualization</span>
                         </div>
                     </div>
@@ -273,22 +285,22 @@
                     </div>
                 </div>
 
-                <!-- Project Card 7: Dummy
+                <!-- Project Bali Tourism AI Guide -->
                 <div class="group bg-surface rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-xl transition-all duration-300">
                     <div class="h-48 overflow-hidden relative">
-                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://placehold.co/600x400/eae7e7/1c1b1b?text=Project+7" alt="Dummy Project 7">
-                        <div class="absolute top-4 left-4">
-                            <span class="text-[10px] font-label-sm px-3 py-1 rounded-full backdrop-blur-md border border-electric-teal/20 bg-electric-teal text-white font-bold opacity-100">Thesis</span>
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="/asset/images/project7/project7.png" alt="Bali Tourism AI Guide">
+                        <div class="absolute top-6 left-4">
+                            <span class="text-[10px] font-label-sm px-3 py-1 rounded-full backdrop-blur-md border border-electric-teal/20 bg-electric-teal text-white font-bold opacity-100">LLM</span>
                         </div>
                     </div>
                     <div class="p-stack-md flex flex-col h-[calc(100%-12rem)]">
-                        <h3 class="font-headline-md text-headline-md text-deep-slate mb-2">Project 7</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">This is a placeholder description for Project 7. Replace this text with the actual details of your project when ready.</p>
+                        <h3 class="font-headline-md text-headline-md text-deep-slate mb-2">Bali Tourism AI Guide</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">An AI-powered guide for tourists visiting Bali, providing personalized recommendations and information about local attractions, restaurants, and cultural sites.</p>
                         
                         <div class="flex items-center justify-between mt-auto pt-4 border-t border-outline-variant/10">
-                            <a href="#" class="font-label-sm text-label-sm font-bold flex items-center gap-1 hover:text-electric-teal transition-colors text-deep-slate">
+                            <!-- <a href="#" class="font-label-sm text-label-sm font-bold flex items-center gap-1 hover:text-electric-teal transition-colors text-deep-slate">
                                 View Detail <span class="material-symbols-outlined text-[18px]">visibility</span>
-                            </a>
+                            </a> -->
                             <div class="flex items-center gap-4">
                                 <a href="#" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors">
                                     View Demo <span class="material-symbols-outlined text-[18px]">open_in_new</span>
@@ -301,22 +313,22 @@
                     </div>
                 </div>
 
-                <!-- Project Card 8: Dummy -->
-                <!-- <div class="group bg-surface rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-xl transition-all duration-300">
+                <!-- Project Heart Disease Prediction -->
+                <div class="group bg-surface rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-xl transition-all duration-300">
                     <div class="h-48 overflow-hidden relative">
-                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://placehold.co/600x400/eae7e7/1c1b1b?text=Project+8" alt="Dummy Project 8">
-                        <div class="absolute top-4 left-4">
-                            <span class="text-[10px] font-label-sm px-3 py-1 rounded-full backdrop-blur-md border border-electric-teal/20 bg-electric-teal text-white font-bold opacity-100">Web Dev</span>
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="./asset/images/project8/project8.png" alt="Dummy Project 8">
+                        <div class="absolute top-6 left-4">
+                            <span class="text-[10px] font-label-sm px-3 py-1 rounded-full backdrop-blur-md border border-electric-teal/20 bg-electric-teal text-white font-bold opacity-100">Data Science</span>
                         </div>
                     </div>
                     <div class="p-stack-md flex flex-col h-[calc(100%-12rem)]">
-                        <h3 class="font-headline-md text-headline-md text-deep-slate mb-2">Project 8</h3>
-                        <p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">This is a placeholder description for Project 8. Replace this text with the actual details of your project when ready.</p>
+                        <h3 class="font-headline-md text-headline-md text-deep-slate mb-2">Heart Disease Prediction</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">A machine learning model to predict the likelihood of heart disease based on patient data.</p>
                         
-                        <div class="flex items-center justify-between mt-auto pt-4 border-t border-outline-variant/10">
+                        <!-- <div class="flex items-center justify-between mt-auto pt-4 border-t border-outline-variant/10">
                             <a href="#" class="font-label-sm text-label-sm font-bold flex items-center gap-1 hover:text-electric-teal transition-colors text-deep-slate">
                                 View Detail <span class="material-symbols-outlined text-[18px]">visibility</span>
-                            </a>
+                            </a> -->
                             <div class="flex items-center gap-4">
                                 <a href="#" class="font-label-sm text-label-sm font-bold flex items-center gap-1 text-on-surface-variant hover:text-electric-teal transition-colors">
                                     View Demo <span class="material-symbols-outlined text-[18px]">open_in_new</span>
@@ -327,7 +339,7 @@
                             </div>
                         </div>
                     </div>
-                </div>  -->
+                </div> 
 
                 <!-- Project Card 9: Dummy -->
                 <!-- <div class="group bg-surface rounded-xl border border-outline-variant/30 overflow-hidden hover:shadow-xl transition-all duration-300">
